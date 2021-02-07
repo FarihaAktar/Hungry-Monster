@@ -11,9 +11,9 @@ searchBtn.addEventListener('click', () => {
 const searchMeal = foods => {
     const foodCategory = foods.meals;
     const gridDiv = document.getElementById("grid-layer");
-    const errorDiv = document.getElementById('error-massage');
-    const p = document.createElement('p');
     if(foodCategory == null){
+        const errorDiv = document.getElementById('error-massage');
+        const p = document.createElement('p');
         errorDiv.style.display = 'block';
         p.innerText = "No Meals Found. Try Again.";
         console.log(p);

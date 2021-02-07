@@ -51,7 +51,6 @@ const mealInfo = allDiv => {
 
 // mealIngredients function
 const mealIngredients = ingredient => {
-    console.log(ingredient.meals[0])
     const ingredientDiv = document.getElementById("meal-ingredients-div");
     const ingredients = [
         ingredient.meals[0].strMeasure1 + ' ' + ingredient.meals[0].strIngredient1,

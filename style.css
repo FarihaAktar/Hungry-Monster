@@ -87,3 +87,10 @@ body{
 .ingredients-list{
     color: rgb(102, 102, 102);
 }
+.back-btn{
+    padding: 10px 30px;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: rgb(240, 118, 18);
+}

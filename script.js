@@ -95,7 +95,6 @@ const mealIngredients = ingredient => {
     })
     ingredientDiv.appendChild(ul);
     document.getElementById("search-meal").style.display = 'none';
-    document.getElementById('grid-layer').style.display = 'none';
 }
 
 

@@ -7,19 +7,19 @@ searchBtn.addEventListener('click', () => {
         .then(data => searchMeal(data))
 
 })
-
+// searchMeal function
 const searchMeal = foods => {
     const foodCategory = foods.meals;
     const gridDiv = document.getElementById("grid-layer");
     const errorDiv = document.getElementById('error-massage');
     const p = document.createElement('p');
     if(foodCategory == null){
+        errorDiv.style.display = 'block';
         p.innerText = "No Meals Found. Try Again.";
         console.log(p);
         errorDiv.appendChild(p);
         console.log(errorDiv);
         document.getElementById("search-meal").style.display = 'none';
-
     }
     else{
         foodCategory.forEach(meal => {
@@ -38,6 +38,7 @@ const searchMeal = foods => {
     }
 }
 
+// mealInfo function
 const mealInfo = allDiv => {
     allDiv.forEach(mealDiv => {
         mealDiv.addEventListener('click', function () {
@@ -46,9 +47,9 @@ const mealInfo = allDiv => {
                 .then(data => mealIngredients(data))
         })
     })
-
 }
 
+// mealIngredients function
 const mealIngredients = ingredient => {
     console.log(ingredient.meals[0])
     const ingredientDiv = document.getElementById("meal-ingredients-div");
@@ -74,7 +75,6 @@ const mealIngredients = ingredient => {
         ingredient.meals[0].strMeasure19 + ' ' + ingredient.meals[0].strIngredient19,
         ingredient.meals[0].strMeasure20 + ' ' + ingredient.meals[0].strIngredient20,
     ]
-    console.log(ingredients)
 
     const singleMeal = `
     <img class="single-img" src="${ingredient.meals[0].strMealThumb}">
@@ -83,9 +83,8 @@ const mealIngredients = ingredient => {
     `
     ingredientDiv.innerHTML = singleMeal;
     const ul = document.createElement('ul');
-    ul.className = 'ingredients-list'
+    ul.className = 'ingredients-list';
     ingredients.forEach(list =>{
-        console.log(list)
         if(list == " " || list.length < 6){
             return;
         }

@@ -25,9 +25,12 @@ body{
 
 /* error div */
 #error-massage{
+    display: none;
     text-align: center;
     margin-top: 50px;
     font-size: 30px;
+    height: 50px;
+    background-color: darksalmon;
 }
 
 /* grid section */
@@ -37,7 +40,7 @@ body{
     margin-right: 40px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 40px;
+    grid-gap: 50px;
     text-align: center;
 }
 
@@ -71,11 +74,16 @@ body{
 #meal-ingredients-div{
     width: 500px;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 .single-img{
     border-radius: 10px;
     object-fit: contain;
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
     
+}
+.ingredients-list{
+    color: rgb(102, 102, 102);
 }

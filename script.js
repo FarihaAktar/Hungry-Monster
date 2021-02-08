@@ -11,6 +11,9 @@ searchBtn.addEventListener('click', () => {
 const searchMeal = foods => {
     const foodCategory = foods.meals;
     const gridDiv = document.getElementById("grid-layer");
+    const singleDiv = document.getElementById("meal-ingredients-div");
+    singleDiv.innerHTML = '';
+    gridDiv.innerHTML = '';
     if(foodCategory == null){
         const errorDiv = document.getElementById('error-massage');
         const p = document.createElement('p');
@@ -94,7 +97,6 @@ const mealIngredients = ingredient => {
         }
     })
     ingredientDiv.appendChild(ul);
-    document.getElementById("search-meal").style.display = 'none';
 }
 
 
